@@ -1,21 +1,26 @@
 
-# Formify
+# MyDoctor
+![image](https://github.com/Michal-Sta/Formify/assets/9118085/a1245f92-f068-4fc8-9bfe-7344f7ed814a)
 
 ## Project Overview:
 
 "ZnanyLekarz" currently holds a "monopoly," and unfortunately, there are no interesting alternatives online.
 
-**Main Features - user**
+**Main Features**
+- [ ] WebApp
+- [ ] Mobile views
+
 *Client features*
 - [ ] List of available doctors with filtering options by specialization, 
 - [ ] Availability on a particular day, and location (city).
 - [ ] Appointment booking. 
 - [ ] Appointment rating with reviews.
-- [ ] Appointment cancellation. 
+- [ ] Appointment cancellation.
 
 *Admin/doctor panel*
 - [ ] Ability to add appointment slots and new locations for a doctor.
-- [ ] Confirmation of booked appointments by the doctor - manual or automatic. 
+- [ ] Confirmation of booked appointments by the doctor - manual or automatic.
+- [ ] Auto calendar - add free slots depends on settings
 
 **Possible but not necessary features:**
 - [ ] Chat with the doctor.
@@ -26,10 +31,11 @@
 ## Technologies:
 - [ ] .NET 8, 
 - [ ] EF Core
-- [ ] React/Angular - thinking, 
+- [ ] React - thinking,
+- [ ] Tailwind - learn!
 - [ ] RabbitMQ/Kafka - would like to learn more, 
 - [ ] MongoDB - would like to learn but SQL-Server will be better option?
-- [ ] Azure - would like to learn
+- [ ] Azure - learn!
 - [ ] Docker
 - [ ] MicroFrontends - would like to learn but dunno if it needed
 - [ ] SignalR
@@ -45,6 +51,7 @@
 - [ ] Architecture - how, where, when, why? - C4 Diagram
 - [ ] Init solutions - structure of projects
 - [ ] Database init (Add diagram here)
+- [ ] Branding - color, etc 
 - [ ] Frontend project init and research UI/UX - use something ready
 - [ ] Auth (bleh) + Login/Register page
 - [ ] Admin panel
