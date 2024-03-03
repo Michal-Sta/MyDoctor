@@ -26,6 +26,8 @@
 - [ ] Chat with the doctor.
 - [ ] Medical documentation accessible only to the doctor with whom the appointment is scheduled.
 - [ ] Email confirmation of appointments.
+- [ ] Sms message with approve
+- [ ] Some Ai - but simple with choose the best doc for ur description
 
 
 ## Technologies:
@@ -56,3 +58,4 @@
 - [ ] Auth (bleh) + Login/Register page
 - [ ] Admin panel
 - [ ] User panel
+- 
