@@ -24,6 +24,7 @@
 
 **Possible but not necessary features:**
 - [ ] Chat with the doctor.
+- [ ] Read data from health document such .pdf
 - [ ] Medical documentation accessible only to the doctor with whom the appointment is scheduled.
 - [ ] Email confirmation of appointments.
 - [ ] Sms message with approve
@@ -58,4 +59,14 @@
 - [ ] Auth (bleh) + Login/Register page
 - [ ] Admin panel
 - [ ] User panel
-- 
+
+## Diagrams
+C4 diagram: 
+- Context
+
+![image](https://github.com/Michal-Sta/Formify/assets/9118085/1b526106-ebc1-49ab-ad74-9083e8059a92)
+
+- Containers
+
+![image](https://github.com/Michal-Sta/Formify/assets/9118085/90634df2-7145-46d8-a056-0262c401e09c)
+
