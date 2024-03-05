@@ -70,3 +70,8 @@ C4 diagram:
 
 ![image](https://github.com/Michal-Sta/Formify/assets/9118085/90634df2-7145-46d8-a056-0262c401e09c)
 
+- Components
+
+![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/dc4bb232-38f1-4125-a5f8-4ec732779da1)
+
+
