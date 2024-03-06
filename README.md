@@ -75,3 +75,6 @@ C4 diagram:
 ![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/dc4bb232-38f1-4125-a5f8-4ec732779da1)
 
 
+## Event storming
+
+![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/b417142b-0d46-4bc8-8784-fa9cb1f82f98)
