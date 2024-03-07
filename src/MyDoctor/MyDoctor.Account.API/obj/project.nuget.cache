@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "TqJXGI+8cyXmcxVdwdQeO8dTESLhYwT8R6Jvi9qSPO0I2I7DO6k2wIE/O/6mb0QVsFcUpKPQCVjLfzi6o42i1A==",
+  "success": true,
+  "projectFilePath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.API\\MyDoctor.Account.API.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://172.16.200.199/nugetserver/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
