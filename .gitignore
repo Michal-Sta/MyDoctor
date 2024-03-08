@@ -5,3 +5,5 @@
 /src/MyDoctor/.vs/MyDoctor
 /src/MyDoctor/.vs/*
 /src/MyDoctor/*/obj/*
+/src/MyDoctor/*/obj/*.json
+/src/MyDoctor/*/obj/Debug/*
