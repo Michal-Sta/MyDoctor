@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.API", "MyDoctor.API\MyDoctor.API.csproj", "{2E4D8E6E-8816-4029-B35F-1FAFC7DF602C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.API", "MyDoctor.API\MyDoctor.API.csproj", "{2E4D8E6E-8816-4029-B35F-1FAFC7DF602C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{B6895CB2-EE0C-429C-B7FF-52C69C4EF514}"
 EndProject
@@ -11,29 +11,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Appointment", "Appointment"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doctor", "Doctor", "{6F86C1C9-6B39-4689-9009-166C13DDBF10}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{DCA3A83B-A327-4D75-9732-B9E65AFF823B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{DCA3A83B-A327-4D75-9732-B9E65AFF823B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{73E8CCC6-5FB1-44C9-AD29-9F5E04F9F0D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Entities", "MyDoctor.Entities\MyDoctor.Entities.csproj", "{DE78BEEC-FD38-41B4-B3ED-45C4DAE8CCD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Entities", "MyDoctor.Entities\MyDoctor.Entities.csproj", "{DE78BEEC-FD38-41B4-B3ED-45C4DAE8CCD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Extension", "MyDoctor.Extension\MyDoctor.Extension.csproj", "{ABC80145-FFC9-46F6-8CEC-6E40E27B748B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Extension", "MyDoctor.Extension\MyDoctor.Extension.csproj", "{ABC80145-FFC9-46F6-8CEC-6E40E27B748B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Infrastructure", "MyDoctor.Infrastructure\MyDoctor.Infrastructure.csproj", "{E6E795FE-D40F-49D3-83D2-3CDD0D0C4A5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Infrastructure", "MyDoctor.Infrastructure\MyDoctor.Infrastructure.csproj", "{E6E795FE-D40F-49D3-83D2-3CDD0D0C4A5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Appointment.Core", "MyDoctor.Appointment.Core\MyDoctor.Appointment.Core.csproj", "{7BBB2E18-3F6A-4C80-9814-FB0C9C4E3DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Appointment.Core", "MyDoctor.Appointment.Core\MyDoctor.Appointment.Core.csproj", "{7BBB2E18-3F6A-4C80-9814-FB0C9C4E3DF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Doctor.Core", "MyDoctor.Doctor.Core\MyDoctor.Doctor.Core.csproj", "{82DBF087-E6E9-4676-A529-C60DFC09BDC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Doctor.Core", "MyDoctor.Doctor.Core\MyDoctor.Doctor.Core.csproj", "{82DBF087-E6E9-4676-A529-C60DFC09BDC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Doctor.API", "MyDoctor.Doctor.API\MyDoctor.Doctor.API.csproj", "{41B0B20B-1D45-4CCA-AF97-F3AE7044D061}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Doctor.API", "MyDoctor.Doctor.API\MyDoctor.Doctor.API.csproj", "{41B0B20B-1D45-4CCA-AF97-F3AE7044D061}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Appointment.API", "MyDoctor.Appointment.API\MyDoctor.Appointment.API.csproj", "{CFE47FAC-E69B-4F0E-898C-A3CBFD77FE58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Appointment.API", "MyDoctor.Appointment.API\MyDoctor.Appointment.API.csproj", "{CFE47FAC-E69B-4F0E-898C-A3CBFD77FE58}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Review", "Review", "{B265D9B3-75C4-4641-B6C2-5FFBC0610FC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Account.Core", "MyDoctor.Account.Core\MyDoctor.Account.Core.csproj", "{76059948-74A9-4567-9727-DB9BD3105F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Auth.Core", "MyDoctor.Account.Core\MyDoctor.Auth.Core.csproj", "{76059948-74A9-4567-9727-DB9BD3105F0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Account.API", "MyDoctor.Account.API\MyDoctor.Account.API.csproj", "{87041F2E-C5A1-4C5D-AF1D-ECEE112812D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctor.Auth.API", "MyDoctor.Account.API\MyDoctor.Auth.API.csproj", "{87041F2E-C5A1-4C5D-AF1D-ECEE112812D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Review.API", "MyDoctor.Review.API\MyDoctor.Review.API.csproj", "{24EC007D-5E8D-45E4-88F8-527692AFC66F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDoctor.Review.Core", "MyDoctor.Review.Core\MyDoctor.Review.Core.csproj", "{3EE0D811-62CC-45DD-ACBA-8B4B46C3AE75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{87041F2E-C5A1-4C5D-AF1D-ECEE112812D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87041F2E-C5A1-4C5D-AF1D-ECEE112812D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87041F2E-C5A1-4C5D-AF1D-ECEE112812D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24EC007D-5E8D-45E4-88F8-527692AFC66F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EC007D-5E8D-45E4-88F8-527692AFC66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EC007D-5E8D-45E4-88F8-527692AFC66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EC007D-5E8D-45E4-88F8-527692AFC66F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE0D811-62CC-45DD-ACBA-8B4B46C3AE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE0D811-62CC-45DD-ACBA-8B4B46C3AE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE0D811-62CC-45DD-ACBA-8B4B46C3AE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE0D811-62CC-45DD-ACBA-8B4B46C3AE75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +111,8 @@ Global
 		{B265D9B3-75C4-4641-B6C2-5FFBC0610FC4} = {B6895CB2-EE0C-429C-B7FF-52C69C4EF514}
 		{76059948-74A9-4567-9727-DB9BD3105F0C} = {DCA3A83B-A327-4D75-9732-B9E65AFF823B}
 		{87041F2E-C5A1-4C5D-AF1D-ECEE112812D6} = {DCA3A83B-A327-4D75-9732-B9E65AFF823B}
+		{24EC007D-5E8D-45E4-88F8-527692AFC66F} = {B265D9B3-75C4-4641-B6C2-5FFBC0610FC4}
+		{3EE0D811-62CC-45DD-ACBA-8B4B46C3AE75} = {B265D9B3-75C4-4641-B6C2-5FFBC0610FC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7E368E94-98DB-443B-9CAE-C6C01D658BF3}

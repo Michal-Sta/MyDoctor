@@ -1,4 +1,4 @@
-﻿namespace MyDoctor.Account.API
+﻿namespace MyDoctor.Review.Core
 {
     public class Class1
     {
