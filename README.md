@@ -51,8 +51,8 @@
 
 ## Roadmaps
 - [ ] Miro - try event storming (add screens here after)
-- [ ] Architecture - how, where, when, why? - C4 Diagram
-- [ ] Init solutions - structure of projects
+- [x] Architecture - how, where, when, why? - C4 Diagram
+- [x] Init solutions - structure of projects
 - [ ] Database init (Add diagram here)
 - [ ] Branding - color, etc 
 - [ ] Frontend project init and research UI/UX - use something ready
@@ -72,7 +72,7 @@ C4 diagram:
 
 - Components
 
-![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/dc4bb232-38f1-4125-a5f8-4ec732779da1)
+![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/dc4d0e37-1175-42e2-8b54-e81263434b06)
 
 
 ## Event storming
