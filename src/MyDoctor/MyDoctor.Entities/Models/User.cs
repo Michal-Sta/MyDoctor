@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MyDoctor.Entities.BaseEntities;
+using MyDoctor.Entities.Model;
+using MyDoctor.Entities.Model.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyDoctor.Entities.Models
 {
@@ -8,12 +11,6 @@ namespace MyDoctor.Entities.Models
         {
         }
 
-        [MaxLength(255)]
-        public string FirstName { get; }
-
-        [MaxLength(255)]
-        public string LastName { get; }
-
         [Required]
         [MaxLength(255)]
         public string Email { get; }
@@ -21,6 +18,12 @@ namespace MyDoctor.Entities.Models
         [MaxLength(100)]
         public string PhoneNumber { get; } = string.Empty;
 
+        public UserType Type { get; set; }
+
         public virtual ICollection<Password> Passwords { get; }
+
+        public virtual ICollection<Patient> Patients { get; }
+
+        public virtual ICollection<Doctor> Doctors { get; }
     }
 }
