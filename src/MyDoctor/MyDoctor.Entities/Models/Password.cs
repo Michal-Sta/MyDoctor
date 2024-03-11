@@ -8,6 +8,7 @@ namespace MyDoctor.Entities.Models
         public Password(string pass)
         {
             Pass = pass;
+            PasswordStatus = PasswordStatus.New;
         }
 
         public PasswordStatus PasswordStatus { get; set; }

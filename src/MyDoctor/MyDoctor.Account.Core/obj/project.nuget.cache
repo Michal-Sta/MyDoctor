@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GmyNpUCbKWighEEiwGZwAkVuSPQuw9vteXcj3y8QlUF0CoXJjU/CzseDpLK9OiP+kmkGwYtt7MrHweKsU+q0rA==",
+  "dgSpecHash": "cSI/ccvJAcZnjD45snCxA7jCYTBVfAIHq4Mn589zDfWQCXnx1fIItcZcemkfSwfKRFYXkMraispFnbw57TLG5A==",
   "success": true,
-  "projectFilePath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.Core\\MyDoctor.Account.Core.csproj",
+  "projectFilePath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.Core\\MyDoctor.Auth.Core.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {

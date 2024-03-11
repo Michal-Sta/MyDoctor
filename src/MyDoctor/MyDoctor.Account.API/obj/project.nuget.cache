@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TqJXGI+8cyXmcxVdwdQeO8dTESLhYwT8R6Jvi9qSPO0I2I7DO6k2wIE/O/6mb0QVsFcUpKPQCVjLfzi6o42i1A==",
+  "dgSpecHash": "vVe/rqPKZlOFh+4P4UMioxrYRn3HfKS3u8+texB8A2mVXZqMYvvDbQqwBdMLNAnuD8E6b8hKRyvqdrrPhMjAhA==",
   "success": true,
-  "projectFilePath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.API\\MyDoctor.Account.API.csproj",
+  "projectFilePath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.API\\MyDoctor.Auth.API.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {

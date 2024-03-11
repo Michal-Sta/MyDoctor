@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyDoctor.Entities.Model;
+using MyDoctor.Entities.Model.Enums;
 using MyDoctor.Entities.Models;
+using MyDoctor.Entities.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +28,10 @@ namespace MyDoctor.Entities
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

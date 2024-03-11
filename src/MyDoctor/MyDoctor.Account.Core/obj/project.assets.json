@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.Core\\MyDoctor.Account.Core.csproj",
-      "projectName": "MyDoctor.Account.Core",
-      "projectPath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.Core\\MyDoctor.Account.Core.csproj",
+      "projectUniqueName": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.Core\\MyDoctor.Auth.Core.csproj",
+      "projectName": "MyDoctor.Auth.Core",
+      "projectPath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.Core\\MyDoctor.Auth.Core.csproj",
       "packagesPath": "C:\\Users\\mstac\\.nuget\\packages\\",
       "outputPath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Account.Core\\obj\\",
       "projectStyle": "PackageReference",
