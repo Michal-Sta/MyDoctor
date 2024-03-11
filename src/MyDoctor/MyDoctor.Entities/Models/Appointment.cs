@@ -17,7 +17,7 @@ namespace MyDoctor.Entities.Model
 
         public bool IsFirst { get; }
 
-        public AppointmentStatus Status { get; set; }
+        public AppointmentStatus Status { get; set; } = AppointmentStatus.Requested;
 
         public DateTime Date { get; }
 

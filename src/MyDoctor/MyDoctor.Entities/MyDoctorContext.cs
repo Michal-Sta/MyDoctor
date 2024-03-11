@@ -1,19 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyDoctor.Entities.Model;
-using MyDoctor.Entities.Model.Enums;
 using MyDoctor.Entities.Models;
-using MyDoctor.Entities.Models.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection.Metadata;
 
 namespace MyDoctor.Entities
 {
     public class MyDoctorContext : DbContext
     {
+        public MyDoctorContext()
+        {
+        }
+
         public MyDoctorContext(DbContextOptions<MyDoctorContext> options) : base(options)
         {
         }
@@ -31,6 +28,32 @@ namespace MyDoctor.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.UseIdentityAlwaysColumns();
+
+            modelBuilder.Entity<Appointment>()
+                .HasOne(e => e.Patient)
+                .WithMany(e => e.Appointments)
+                .HasForeignKey(e => e.PatientId)
+                .IsRequired();
+
+            modelBuilder.Entity<Appointment>()
+               .HasOne(e => e.Doctor)
+               .WithMany(e => e.Appointments)
+               .HasForeignKey(e => e.DoctorId)
+               .IsRequired();
+
+            modelBuilder.Entity<Patient>()
+               .HasOne(e => e.User)
+               .WithMany(e => e.Patients)
+               .HasForeignKey(e => e.UserId)
+               .IsRequired();
+
+            modelBuilder.Entity<Doctor>()
+               .HasOne(e => e.User)
+               .WithMany(e => e.Doctors)
+               .HasForeignKey(e => e.UserId)
+               .IsRequired();
+
             base.OnModelCreating(modelBuilder);
         }
     }

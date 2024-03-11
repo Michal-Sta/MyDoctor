@@ -1,10 +1,11 @@
-﻿using MyDoctor.Entities.Model;
+﻿using MyDoctor.Entities.BaseEntities;
+using MyDoctor.Entities.Model;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyDoctor.Entities.Models
 {
-    public class DoctorAppointmentType
+    public class DoctorAppointmentType : EntityBase
     {
         [Required]
         public int DoctorId { get; set; }

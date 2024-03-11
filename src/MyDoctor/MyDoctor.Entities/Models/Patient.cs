@@ -8,6 +8,10 @@ namespace MyDoctor.Entities.Model
 {
     public class Patient: PersonBase
     {
+        protected Patient()
+        {
+        }
+
         public Patient(User user, string firstName, string lastName, DateTime? birthDate, PersonType type = PersonType.Me) : base(firstName, lastName, birthDate, type)
         {
             UserId = user.Id;

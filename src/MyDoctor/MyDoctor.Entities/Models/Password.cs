@@ -5,6 +5,10 @@ namespace MyDoctor.Entities.Models
 {
     public class Password : EntityBase
     {
+        protected Password()
+        {
+        }
+
         public Password(string pass)
         {
             Pass = pass;

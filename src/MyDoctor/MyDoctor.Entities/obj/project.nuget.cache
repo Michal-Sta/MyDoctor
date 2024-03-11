@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WS8BdjgepmWWo5RkfhHFs8oTT4ay3crTnBUu/rTEvNKxqmymOTMgUMEbwD4R9mTwrLH2AQaSqRELdTQP3Odc5w==",
+  "dgSpecHash": "3gND9tt0FsgzN1lvABFUOHZEJQYYmV6q4E5CCuNl2FouDvDDlKHfRW/NqnhXHDvGtjZi1J+I0cyjUo785bB2lg==",
   "success": true,
   "projectFilePath": "D:\\Repository\\MyDoctor\\src\\MyDoctor\\MyDoctor.Entities\\MyDoctor.Entities.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\mstac\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.2\\microsoft.entityframeworkcore.analyzers.8.0.2.nupkg.sha512",
     "C:\\Users\\mstac\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.2\\microsoft.entityframeworkcore.design.8.0.2.nupkg.sha512",
     "C:\\Users\\mstac\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.2\\microsoft.entityframeworkcore.relational.8.0.2.nupkg.sha512",
+    "C:\\Users\\mstac\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.2\\microsoft.entityframeworkcore.tools.8.0.2.nupkg.sha512",
     "C:\\Users\\mstac\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\mstac\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\mstac\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

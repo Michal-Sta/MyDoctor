@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MyDoctor.Entities.BaseEntities;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyDoctor.Entities.Models
 {
-    public class DoctorSpecialization
+    public class DoctorSpecialization : EntityBase
     {
         [Required]
         public int DoctorId { get; set; }
