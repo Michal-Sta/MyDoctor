@@ -24,12 +24,6 @@ namespace MyDoctor.Entities.Configuration
                .IsRequired();
 
             modelBuilder.Entity<Appointment>()
-               .HasOne(e => e.Doctor)
-               .WithMany(e => e.Appointments)
-               .HasForeignKey(e => e.DoctorId)
-               .IsRequired();
-
-            modelBuilder.Entity<Appointment>()
                 .HasOne(e => e.DoctorAppointmentType)
                 .WithMany(e => e.Appointments)
                 .HasForeignKey(e => e.DoctorAppointmentTypeId)
@@ -49,8 +43,13 @@ namespace MyDoctor.Entities.Configuration
                 .WithOne(e => e.Doctor)
                 .HasForeignKey(e => e.DoctorId)
                 .IsRequired();
-        }
 
+            modelBuilder.Entity<Doctor>()
+                .HasMany(e => e.Reviews)
+                .WithOne(e => e.ReviewedDoctor)
+                .HasForeignKey(e => e.ReviewdDoctorId)
+                .IsRequired();
+        }
 
         private static void CreateSpecializationConfiguration(this ModelBuilder modelBuilder)
         {

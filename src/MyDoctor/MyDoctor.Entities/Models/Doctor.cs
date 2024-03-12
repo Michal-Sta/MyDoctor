@@ -24,8 +24,6 @@ namespace MyDoctor.Entities.Models
         [MaxLength(500)]
         public string OtherSpecialization { get; } = string.Empty;
 
-        public virtual ICollection<Appointment> Appointments { get; }
-
         public virtual ICollection<DoctorSpecialization> DoctorSpecializations { get; }
 
         [Required]
@@ -33,5 +31,7 @@ namespace MyDoctor.Entities.Models
 
         [ForeignKey(nameof(UserId))]
         public virtual User User { get; }
+        public virtual ICollection<Review> Reviews{ get; }
+
     }
 }
