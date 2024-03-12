@@ -1,6 +1,6 @@
 ﻿using MyDoctor.Entities.BaseEntities;
+using MyDoctor.Entities.Enums;
 using MyDoctor.Entities.Models;
-using MyDoctor.Entities.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 

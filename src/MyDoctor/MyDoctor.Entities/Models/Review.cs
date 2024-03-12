@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using MyDoctor.Entities.BaseEntities;
+using MyDoctor.Entities.Enums;
 using MyDoctor.Entities.Model;
-using MyDoctor.Entities.Model.Enums;
 
 namespace MyDoctor.Entities.Models
 {

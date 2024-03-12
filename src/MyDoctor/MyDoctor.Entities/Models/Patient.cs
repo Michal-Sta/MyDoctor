@@ -1,5 +1,5 @@
 ﻿using MyDoctor.Entities.BaseEntities;
-using MyDoctor.Entities.Model.Enums;
+using MyDoctor.Entities.Enums;
 using MyDoctor.Entities.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;

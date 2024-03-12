@@ -1,12 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MyDoctor.Entities
+namespace MyDoctor.Entities.Context
 {
     public class MyDoctorContextFactory : IDesignTimeDbContextFactory<MyDoctorContext>
     {
@@ -19,7 +14,7 @@ namespace MyDoctor.Entities
         {
             var optionsBuilder = new DbContextOptionsBuilder<MyDoctorContext>();
 
-            optionsBuilder.UseNpgsql(@"User ID =postgres;Password=1;Server=localhost;Port=5432;Database=FitStepDb;Integrated Security=true;Pooling=true;");
+            optionsBuilder.UseNpgsql(@"Server=localhost;Port=5432;Database=MyDoctorContext;Pooling=true;");
 
             return new MyDoctorContext(optionsBuilder.Options);
         }

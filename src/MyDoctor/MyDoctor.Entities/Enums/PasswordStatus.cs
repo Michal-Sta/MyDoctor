@@ -1,4 +1,4 @@
-﻿namespace MyDoctor.Entities.Models.Enums
+﻿namespace MyDoctor.Entities.Enums
 {
     public enum PasswordStatus
     {

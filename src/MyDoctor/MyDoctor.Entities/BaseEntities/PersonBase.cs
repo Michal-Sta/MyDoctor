@@ -1,4 +1,4 @@
-﻿using MyDoctor.Entities.Model.Enums;
+﻿using MyDoctor.Entities.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyDoctor.Entities.BaseEntities

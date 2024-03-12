@@ -3,7 +3,7 @@ using MyDoctor.Entities.Configuration;
 using MyDoctor.Entities.Model;
 using MyDoctor.Entities.Models;
 
-namespace MyDoctor.Entities
+namespace MyDoctor.Entities.Context
 {
     public class MyDoctorContext : DbContext
     {

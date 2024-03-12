@@ -1,5 +1,5 @@
 ﻿using MyDoctor.Entities.BaseEntities;
-using MyDoctor.Entities.Models.Enums;
+using MyDoctor.Entities.Enums;
 
 namespace MyDoctor.Entities.Models
 {

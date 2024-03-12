@@ -1,6 +1,6 @@
 ﻿using MyDoctor.Entities.BaseEntities;
+using MyDoctor.Entities.Enums;
 using MyDoctor.Entities.Model;
-using MyDoctor.Entities.Model.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyDoctor.Entities.Models
@@ -16,9 +16,6 @@ namespace MyDoctor.Entities.Models
             Email = email;
             PhoneNumber = phoneNumber;
             Type = type;
-            Passwords = passwords;
-            Patients = patients;
-            Doctors = doctors;
         }
 
         [Required]

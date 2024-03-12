@@ -1,4 +1,4 @@
-﻿namespace MyDoctor.Entities.Model.Enums
+﻿namespace MyDoctor.Entities.Enums
 {
     public enum PersonType
     {
