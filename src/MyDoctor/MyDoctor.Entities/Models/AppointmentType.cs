@@ -22,8 +22,6 @@ namespace MyDoctor.Entities.Model
 
         public int TimeInMinutes { get; }
 
-        public virtual ICollection<Appointment> Appointments { get; }
-
         public virtual ICollection<DoctorAppointmentType> DoctorAppointmentTypes { get; }
     }
 }

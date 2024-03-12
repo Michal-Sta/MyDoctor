@@ -12,7 +12,7 @@ namespace MyDoctor.Entities.Model
         {
         }
 
-        public Appointment(string comment, bool isFirst, AppointmentStatus status, DateTime date, int patientId, Patient patient, int doctorId, Doctor doctor, int doctorAppointmentTypeId, DoctorAppointmentType doctorAppointmentType)
+        public Appointment(string comment, bool isFirst, AppointmentStatus status, DateTime date, int patientId, Patient patient, int doctorAppointmentTypeId, DoctorAppointmentType doctorAppointmentType)
         {
             Comment = comment;
             IsFirst = isFirst;
@@ -20,8 +20,6 @@ namespace MyDoctor.Entities.Model
             Date = date;
             PatientId = patientId;
             Patient = patient;
-            DoctorId = doctorId;
-            Doctor = doctor;
             DoctorAppointmentTypeId = doctorAppointmentTypeId;
             DoctorAppointmentType = doctorAppointmentType;
         }
@@ -40,12 +38,6 @@ namespace MyDoctor.Entities.Model
 
         [ForeignKey(nameof(PatientId))]
         public virtual Patient Patient { get; }
-
-        [Required]
-        public int DoctorId { get; }
-
-        [ForeignKey(nameof(DoctorId))]
-        public virtual Doctor Doctor { get; }
 
         [Required]
         public int DoctorAppointmentTypeId { get; }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyDoctor.Entities.Model
 {
-    public class Patient: PersonBase
+    public class Patient : PersonBase
     {
         protected Patient()
         {
