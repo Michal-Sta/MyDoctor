@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MyDoctor.Entities.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class InitMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -85,7 +85,7 @@ namespace MyDoctor.Entities.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Password",
+                name: "Passwords",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -99,9 +99,9 @@ namespace MyDoctor.Entities.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Password", x => x.Id);
+                    table.PrimaryKey("PK_Passwords", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Password_Users_UserId",
+                        name: "FK_Passwords_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -164,7 +164,7 @@ namespace MyDoctor.Entities.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "DoctorSpecialization",
+                name: "DoctorSpecializations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -178,17 +178,40 @@ namespace MyDoctor.Entities.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DoctorSpecialization", x => x.Id);
+                    table.PrimaryKey("PK_DoctorSpecializations", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_DoctorSpecialization_Doctors_DoctorId",
+                        name: "FK_DoctorSpecializations_Doctors_DoctorId",
                         column: x => x.DoctorId,
                         principalTable: "Doctors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DoctorSpecialization_Specializations_SpecializationId",
+                        name: "FK_DoctorSpecializations_Specializations_SpecializationId",
                         column: x => x.SpecializationId,
                         principalTable: "Specializations",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Reviews",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
+                    ReviewerId = table.Column<int>(type: "integer", nullable: false),
+                    Guid = table.Column<Guid>(type: "uuid", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    CreatedBy = table.Column<int>(type: "integer", nullable: false),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Reviews", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Reviews_Patients_ReviewerId",
+                        column: x => x.ReviewerId,
+                        principalTable: "Patients",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -202,6 +225,7 @@ namespace MyDoctor.Entities.Migrations
                     Status = table.Column<int>(type: "integer", nullable: false),
                     PatientId = table.Column<int>(type: "integer", nullable: false),
                     DoctorId = table.Column<int>(type: "integer", nullable: false),
+                    DoctorAppointmentTypeId = table.Column<int>(type: "integer", nullable: false),
                     AppointmentTypeId = table.Column<int>(type: "integer", nullable: true),
                     Guid = table.Column<Guid>(type: "uuid", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -217,6 +241,12 @@ namespace MyDoctor.Entities.Migrations
                         principalTable: "AppointmentTypes",
                         principalColumn: "Id");
                     table.ForeignKey(
+                        name: "FK_Appointments_DoctorAppointmentTypes_DoctorAppointmentTypeId",
+                        column: x => x.DoctorAppointmentTypeId,
+                        principalTable: "DoctorAppointmentTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Appointments_Doctors_DoctorId",
                         column: x => x.DoctorId,
                         principalTable: "Doctors",
@@ -230,32 +260,15 @@ namespace MyDoctor.Entities.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Reviews",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    PatientId = table.Column<int>(type: "integer", nullable: true),
-                    Guid = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CreatedBy = table.Column<int>(type: "integer", nullable: false),
-                    IsActive = table.Column<bool>(type: "boolean", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Reviews", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Reviews_Patients_PatientId",
-                        column: x => x.PatientId,
-                        principalTable: "Patients",
-                        principalColumn: "Id");
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_Appointments_AppointmentTypeId",
                 table: "Appointments",
                 column: "AppointmentTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Appointments_DoctorAppointmentTypeId",
+                table: "Appointments",
+                column: "DoctorAppointmentTypeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Appointments_DoctorId",
@@ -283,18 +296,18 @@ namespace MyDoctor.Entities.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DoctorSpecialization_DoctorId",
-                table: "DoctorSpecialization",
+                name: "IX_DoctorSpecializations_DoctorId",
+                table: "DoctorSpecializations",
                 column: "DoctorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DoctorSpecialization_SpecializationId",
-                table: "DoctorSpecialization",
+                name: "IX_DoctorSpecializations_SpecializationId",
+                table: "DoctorSpecializations",
                 column: "SpecializationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Password_UserId",
-                table: "Password",
+                name: "IX_Passwords_UserId",
+                table: "Passwords",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -303,9 +316,9 @@ namespace MyDoctor.Entities.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reviews_PatientId",
+                name: "IX_Reviews_ReviewerId",
                 table: "Reviews",
-                column: "PatientId");
+                column: "ReviewerId");
         }
 
         /// <inheritdoc />
@@ -315,28 +328,28 @@ namespace MyDoctor.Entities.Migrations
                 name: "Appointments");
 
             migrationBuilder.DropTable(
-                name: "DoctorAppointmentTypes");
+                name: "DoctorSpecializations");
 
             migrationBuilder.DropTable(
-                name: "DoctorSpecialization");
-
-            migrationBuilder.DropTable(
-                name: "Password");
+                name: "Passwords");
 
             migrationBuilder.DropTable(
                 name: "Reviews");
 
             migrationBuilder.DropTable(
-                name: "AppointmentTypes");
-
-            migrationBuilder.DropTable(
-                name: "Doctors");
+                name: "DoctorAppointmentTypes");
 
             migrationBuilder.DropTable(
                 name: "Specializations");
 
             migrationBuilder.DropTable(
                 name: "Patients");
+
+            migrationBuilder.DropTable(
+                name: "AppointmentTypes");
+
+            migrationBuilder.DropTable(
+                name: "Doctors");
 
             migrationBuilder.DropTable(
                 name: "Users");

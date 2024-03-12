@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyDoctor.Entities.Configuration;
 using MyDoctor.Entities.Model;
 using MyDoctor.Entities.Models;
-using System.Reflection.Metadata;
 
 namespace MyDoctor.Entities
 {
@@ -19,9 +19,9 @@ namespace MyDoctor.Entities
         public DbSet<AppointmentType> AppointmentTypes { get; set; }
         public DbSet<DoctorAppointmentType> DoctorAppointmentTypes { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
-        public DbSet<DoctorSpecialization> DoctorSpecialization { get; set; }
+        public DbSet<DoctorSpecialization> DoctorSpecializations { get; set; }
         public DbSet<Specialization> Specializations { get; set; }
-        public DbSet<Password> Password { get; set; }
+        public DbSet<Password> Passwords { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<User> Users { get; set; }
@@ -30,29 +30,7 @@ namespace MyDoctor.Entities
         {
             modelBuilder.UseIdentityAlwaysColumns();
 
-            modelBuilder.Entity<Appointment>()
-                .HasOne(e => e.Patient)
-                .WithMany(e => e.Appointments)
-                .HasForeignKey(e => e.PatientId)
-                .IsRequired();
-
-            modelBuilder.Entity<Appointment>()
-               .HasOne(e => e.Doctor)
-               .WithMany(e => e.Appointments)
-               .HasForeignKey(e => e.DoctorId)
-               .IsRequired();
-
-            modelBuilder.Entity<Patient>()
-               .HasOne(e => e.User)
-               .WithMany(e => e.Patients)
-               .HasForeignKey(e => e.UserId)
-               .IsRequired();
-
-            modelBuilder.Entity<Doctor>()
-               .HasOne(e => e.User)
-               .WithMany(e => e.Doctors)
-               .HasForeignKey(e => e.UserId)
-               .IsRequired();
+            modelBuilder.EntityConfigure();
 
             base.OnModelCreating(modelBuilder);
         }

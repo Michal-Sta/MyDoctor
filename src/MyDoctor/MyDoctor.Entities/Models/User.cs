@@ -7,8 +7,18 @@ namespace MyDoctor.Entities.Models
 {
     public class User : EntityBase
     {
-        public User()
+        protected User()
         {
+        }
+
+        public User(string email, string phoneNumber, UserType type, ICollection<Password> passwords, ICollection<Patient> patients, ICollection<Doctor> doctors)
+        {
+            Email = email;
+            PhoneNumber = phoneNumber;
+            Type = type;
+            Passwords = passwords;
+            Patients = patients;
+            Doctors = doctors;
         }
 
         [Required]

@@ -12,6 +12,20 @@ namespace MyDoctor.Entities.Model
         {
         }
 
+        public Appointment(string comment, bool isFirst, AppointmentStatus status, DateTime date, int patientId, Patient patient, int doctorId, Doctor doctor, int doctorAppointmentTypeId, DoctorAppointmentType doctorAppointmentType)
+        {
+            Comment = comment;
+            IsFirst = isFirst;
+            Status = status;
+            Date = date;
+            PatientId = patientId;
+            Patient = patient;
+            DoctorId = doctorId;
+            Doctor = doctor;
+            DoctorAppointmentTypeId = doctorAppointmentTypeId;
+            DoctorAppointmentType = doctorAppointmentType;
+        }
+
         [MaxLength(500)]
         public string Comment { get; } = string.Empty;
 
@@ -37,6 +51,6 @@ namespace MyDoctor.Entities.Model
         public int DoctorAppointmentTypeId { get; }
 
         [ForeignKey(nameof(DoctorAppointmentTypeId))]
-        public virtual DoctorAppointmentType DoctorAppointmentTypes { get; }
+        public virtual DoctorAppointmentType DoctorAppointmentType { get; }
     }
 }

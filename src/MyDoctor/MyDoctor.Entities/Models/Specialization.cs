@@ -4,14 +4,14 @@ namespace MyDoctor.Entities.Models
 {
     public class Specialization : EntityBase
     {
+        protected Specialization()
+        {
+        }
+
         public Specialization(string title, string code)
         {
             Title = title;
             Code = code;
-        }
-
-        protected Specialization()
-        {
         }
 
         public string Title { get; }

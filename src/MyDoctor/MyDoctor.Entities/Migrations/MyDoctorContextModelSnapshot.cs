@@ -39,6 +39,9 @@ namespace MyDoctor.Entities.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("DoctorAppointmentTypeId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("DoctorId")
                         .HasColumnType("integer");
 
@@ -57,6 +60,8 @@ namespace MyDoctor.Entities.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AppointmentTypeId");
+
+                    b.HasIndex("DoctorAppointmentTypeId");
 
                     b.HasIndex("DoctorId");
 
@@ -224,7 +229,7 @@ namespace MyDoctor.Entities.Migrations
 
                     b.HasIndex("SpecializationId");
 
-                    b.ToTable("DoctorSpecialization");
+                    b.ToTable("DoctorSpecializations");
                 });
 
             modelBuilder.Entity("MyDoctor.Entities.Models.Password", b =>
@@ -257,7 +262,7 @@ namespace MyDoctor.Entities.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Password");
+                    b.ToTable("Passwords");
                 });
 
             modelBuilder.Entity("MyDoctor.Entities.Models.Review", b =>
@@ -280,12 +285,12 @@ namespace MyDoctor.Entities.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
 
-                    b.Property<int?>("PatientId")
+                    b.Property<int>("ReviewerId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PatientId");
+                    b.HasIndex("ReviewerId");
 
                     b.ToTable("Reviews");
                 });
@@ -349,6 +354,12 @@ namespace MyDoctor.Entities.Migrations
                         .WithMany("Appointments")
                         .HasForeignKey("AppointmentTypeId");
 
+                    b.HasOne("MyDoctor.Entities.Models.DoctorAppointmentType", "DoctorAppointmentType")
+                        .WithMany("Appointments")
+                        .HasForeignKey("DoctorAppointmentTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("MyDoctor.Entities.Models.Doctor", "Doctor")
                         .WithMany("Appointments")
                         .HasForeignKey("DoctorId")
@@ -362,6 +373,8 @@ namespace MyDoctor.Entities.Migrations
                         .IsRequired();
 
                     b.Navigation("Doctor");
+
+                    b.Navigation("DoctorAppointmentType");
 
                     b.Navigation("Patient");
                 });
@@ -439,9 +452,13 @@ namespace MyDoctor.Entities.Migrations
 
             modelBuilder.Entity("MyDoctor.Entities.Models.Review", b =>
                 {
-                    b.HasOne("MyDoctor.Entities.Model.Patient", null)
+                    b.HasOne("MyDoctor.Entities.Model.Patient", "Reviewer")
                         .WithMany("AddedReviews")
-                        .HasForeignKey("PatientId");
+                        .HasForeignKey("ReviewerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Reviewer");
                 });
 
             modelBuilder.Entity("MyDoctor.Entities.Model.AppointmentType", b =>
@@ -463,6 +480,11 @@ namespace MyDoctor.Entities.Migrations
                     b.Navigation("Appointments");
 
                     b.Navigation("DoctorSpecializations");
+                });
+
+            modelBuilder.Entity("MyDoctor.Entities.Models.DoctorAppointmentType", b =>
+                {
+                    b.Navigation("Appointments");
                 });
 
             modelBuilder.Entity("MyDoctor.Entities.Models.Specialization", b =>

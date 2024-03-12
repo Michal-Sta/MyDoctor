@@ -7,6 +7,21 @@ namespace MyDoctor.Entities.Models
 {
     public class DoctorAppointmentType : EntityBase
     {
+        protected DoctorAppointmentType()
+        {
+        }
+
+        public DoctorAppointmentType(int doctorId, Doctor doctor, int appointmentTypeId, AppointmentType appointmentType, string description, int cost, ICollection<Appointment> appointments)
+        {
+            DoctorId = doctorId;
+            Doctor = doctor;
+            AppointmentTypeId = appointmentTypeId;
+            AppointmentType = appointmentType;
+            Description = description;
+            Cost = cost;
+            Appointments = appointments;
+        }
+
         [Required]
         public int DoctorId { get; set; }
 
@@ -22,5 +37,7 @@ namespace MyDoctor.Entities.Models
         public string Description { get; set; } = string.Empty;
 
         public int Cost { get; set; }
+
+        public virtual ICollection<Appointment> Appointments { get; set; }
     }
 }

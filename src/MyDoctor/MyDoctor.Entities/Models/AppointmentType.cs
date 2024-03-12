@@ -5,15 +5,15 @@ namespace MyDoctor.Entities.Model
 {
     public class AppointmentType : EntityBase
     {
+        protected AppointmentType()
+        {
+        }
+
         public AppointmentType(string title, string description, int timeInMinutes, int cost)
         {
             Title = title;
             Description = description;
             TimeInMinutes = timeInMinutes;
-        }
-
-        protected AppointmentType()
-        {
         }
 
         public string Title { get; }

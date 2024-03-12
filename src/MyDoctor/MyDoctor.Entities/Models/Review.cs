@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using MyDoctor.Entities.BaseEntities;
+using MyDoctor.Entities.Model;
 using MyDoctor.Entities.Model.Enums;
 
 namespace MyDoctor.Entities.Models
@@ -11,7 +12,7 @@ namespace MyDoctor.Entities.Models
         {
         }
 
-        public Review(string content, RatingType rating, User reviewer, User reviewedUser)
+        public Review(string content, RatingType rating, Patient reviewer, User reviewedUser)
         {
             Content = content;
             Rating = rating;
@@ -33,7 +34,7 @@ namespace MyDoctor.Entities.Models
         public int ReviewdUserId { get; }
 
         [ForeignKey(nameof(ReviewerId))]
-        public virtual User Reviewer { get; }
+        public virtual Patient Reviewer { get; }
 
         [ForeignKey(nameof(ReviewdUserId))]
         public virtual User ReviewedUser { get; }
