@@ -79,3 +79,8 @@ C4 diagram:
 
 ![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/2b697d49-6f14-4c4c-a975-1b6593fb0910)
 
+## Diagram DB
+
+![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/02866baf-8e8b-47dc-a27a-bef054007078)
+
+
