@@ -1,4 +1,5 @@
 
+
 # MyDoctor
 ![image](https://github.com/Michal-Sta/Formify/assets/9118085/a1245f92-f068-4fc8-9bfe-7344f7ed814a)
 
@@ -53,9 +54,9 @@
 - [ ] Miro - try event storming (add screens here after)
 - [x] Architecture - how, where, when, why? - C4 Diagram
 - [x] Init solutions - structure of projects
-- [ ] Database init (Add diagram here)
+- [x] Database init (Add diagram here)
 - [ ] Branding - color, etc 
-- [ ] Frontend project init and research UI/UX - use something ready
+- [x] Frontend project init and research UI/UX - use something ready
 - [ ] Auth (bleh) + Login/Register page
 - [ ] Admin panel
 - [ ] User panel
@@ -83,4 +84,15 @@ C4 diagram:
 
 ![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/02866baf-8e8b-47dc-a27a-bef054007078)
 
+## Research UI
 
+- https://www.microapp.io/ai-component-generator
+- tailwind material
+- https://tailwindcomponents.com/?ref=material-tailwind
+- https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=nr-index&_ga=2.186812449.824193666.1710532797-1058424977.1710532797
+
+## Research Technology
+
+- https://tanstack.com/query/latest/docs/framework/react/overview
+- https://www.npmjs.com/package/react-error-boundary
+- https://auth0.com/docs/quickstart/backend/aspnet-core-webapi/01-authorization
