@@ -9,7 +9,6 @@
 
 **Main Features**
 - [ ] WebApp
-- [ ] Mobile views
 
 *Client features*
 - [ ] List of available doctors with filtering options by specialization, 
@@ -31,11 +30,10 @@
 - [ ] Sms message with approve
 - [ ] Some Ai - but simple with choose the best doc for ur description
 
-
 ## Technologies:
 - [ ] .NET 8, 
 - [ ] EF Core
-- [ ] React - thinking,
+- [ ] React
 - [ ] Tailwind - learn!
 - [ ] RabbitMQ/Kafka - would like to learn more, 
 - [ ] MongoDB - would like to learn but SQL-Server will be better option?
@@ -55,7 +53,7 @@
 - [x] Architecture - how, where, when, why? - C4 Diagram
 - [x] Init solutions - structure of projects
 - [x] Database init (Add diagram here)
-- [ ] Branding - color, etc 
+- [x] Branding - color, etc 
 - [x] Frontend project init and research UI/UX - use something ready
 - [ ] Auth (bleh) + Login/Register page
 - [ ] Admin panel
