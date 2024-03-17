@@ -1,4 +1,5 @@
 
+
 # MyDoctor
 ![image](https://github.com/Michal-Sta/Formify/assets/9118085/a1245f92-f068-4fc8-9bfe-7344f7ed814a)
 
@@ -8,7 +9,6 @@
 
 **Main Features**
 - [ ] WebApp
-- [ ] Mobile views
 
 *Client features*
 - [ ] List of available doctors with filtering options by specialization, 
@@ -30,11 +30,10 @@
 - [ ] Sms message with approve
 - [ ] Some Ai - but simple with choose the best doc for ur description
 
-
 ## Technologies:
 - [ ] .NET 8, 
 - [ ] EF Core
-- [ ] React - thinking,
+- [ ] React
 - [ ] Tailwind - learn!
 - [ ] RabbitMQ/Kafka - would like to learn more, 
 - [ ] MongoDB - would like to learn but SQL-Server will be better option?
@@ -53,9 +52,9 @@
 - [ ] Miro - try event storming (add screens here after)
 - [x] Architecture - how, where, when, why? - C4 Diagram
 - [x] Init solutions - structure of projects
-- [ ] Database init (Add diagram here)
-- [ ] Branding - color, etc 
-- [ ] Frontend project init and research UI/UX - use something ready
+- [x] Database init (Add diagram here)
+- [x] Branding - color, etc 
+- [x] Frontend project init and research UI/UX - use something ready
 - [ ] Auth (bleh) + Login/Register page
 - [ ] Admin panel
 - [ ] User panel
@@ -83,4 +82,15 @@ C4 diagram:
 
 ![image](https://github.com/Michal-Sta/MyDoctor/assets/9118085/02866baf-8e8b-47dc-a27a-bef054007078)
 
+## Research UI
 
+- https://www.microapp.io/ai-component-generator
+- tailwind material
+- https://tailwindcomponents.com/?ref=material-tailwind
+- https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=nr-index&_ga=2.186812449.824193666.1710532797-1058424977.1710532797
+
+## Research Technology
+
+- https://tanstack.com/query/latest/docs/framework/react/overview
+- https://www.npmjs.com/package/react-error-boundary
+- https://auth0.com/docs/quickstart/backend/aspnet-core-webapi/01-authorization
