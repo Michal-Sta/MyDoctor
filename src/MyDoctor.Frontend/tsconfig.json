@@ -7,12 +7,14 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "allowJs": true,
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
