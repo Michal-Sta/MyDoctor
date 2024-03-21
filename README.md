@@ -48,7 +48,7 @@
 -   Adoption of MongoDB for database storage, with potential consideration of Azure services.
 
 ## Roadmaps
-- [ ] Miro - try event storming (add screens here after)
+- [x] Miro - try event storming (add screens here after)
 - [x] Architecture - how, where, when, why? - C4 Diagram
 - [x] Init solutions - structure of projects
 - [x] Database init (Add diagram here)
@@ -85,7 +85,7 @@ C4 diagram:
 ## Research UI
 
 - https://www.microapp.io/ai-component-generator
-- tailwind material
+- tailwind material - free?
 - https://tailwindcomponents.com/?ref=material-tailwind
 - https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=nr-index&_ga=2.186812449.824193666.1710532797-1058424977.1710532797
 
