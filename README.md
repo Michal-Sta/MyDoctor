@@ -31,10 +31,9 @@
 - [ ] Some Ai - but simple with choose the best doc for ur description
 
 ## Technologies:
-- [ ] .NET 8, 
-- [ ] EF Core
-- [ ] React
-- [ ] Tailwind - learn!
+- [x] .NET 8, 
+- [x] EF Core
+- [x] React
 - [ ] RabbitMQ/Kafka - would like to learn more, 
 - [ ] MongoDB - would like to learn but SQL-Server will be better option?
 - [ ] Azure - learn!
@@ -44,7 +43,7 @@
 
 ## Technological Assumptions:
 -   Utilization of .NET 8 for backend development.
--   Implementation of React/Angular for frontend development.
+-   Implementation of React for frontend development.
 -   Integration of RabbitMQ/Kafka for messaging.
 -   Adoption of MongoDB for database storage, with potential consideration of Azure services.
 
@@ -55,9 +54,10 @@
 - [x] Database init (Add diagram here)
 - [x] Branding - color, etc 
 - [x] Frontend project init and research UI/UX - use something ready
-- [ ] Auth (bleh) + Login/Register page
-- [ ] Admin panel
+- [ ] Patient registration wizard
+- [ ] Doctor registration wizard
 - [ ] User panel
+- [ ] Auth (bleh) + Login/Register page
 
 ## Diagrams
 C4 diagram: 
