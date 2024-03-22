@@ -1,4 +1,4 @@
-import { Box, CssBaseline, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import { Box, Container, CssBaseline, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import React from "react";
@@ -10,11 +10,11 @@ import Sidebar from "../layout/sidebar";
 
 export const Route = createRootRoute({
   component: () => (
-    <Box sx={{ display: "flex" }}>
+    <>
       <CssBaseline />
       <Sidebar>
         <List>
-          <Link to="/">
+          <Link to="/searcher">
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -47,9 +47,10 @@ export const Route = createRootRoute({
         </List>
         <TanStackRouterDevtools />
       </Sidebar>
-      <Layout>
-        <Outlet />
-      </Layout>
-    </Box>
+   
+       <Layout>
+       <Outlet />
+     </Layout>
+     </>
   ),
 });

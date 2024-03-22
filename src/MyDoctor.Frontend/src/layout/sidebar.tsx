@@ -8,6 +8,7 @@ export default function Sidebar({ children }: React.PropsWithChildren) {
     <>
       <Drawer
         variant="permanent"
+        
         sx={{
           width: drawerWidth,
           flexShrink: 0,
